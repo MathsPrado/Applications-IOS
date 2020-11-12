@@ -59,7 +59,7 @@ struct ContentView: View {
                     LazyHStack{
                         ForEach(self.albums, id: \.self, content: {
                             album in
-                            AlbumArt(album: album).onTapGesture{
+                            AlbumArt(album: album, IsWithText: true).onTapGesture{
                                 self.currentAlbum = album
                             }
                         })
@@ -74,7 +74,7 @@ struct ContentView: View {
                             id: \.self,
                             content:{
                                 song in
-                                    SongCell(song: song)
+                                SongCell(album: currentAlbum ?? albums.first!, song: song)
                             })
                 }
             }.navigationTitle("My band Name")
@@ -84,6 +84,7 @@ struct ContentView: View {
 
 struct AlbumArt : View {
     var album : Album
+    var IsWithText : Bool
     var body: some View {
         ZStack (alignment: .bottom, content: {
             Image(album.image)
@@ -91,26 +92,34 @@ struct AlbumArt : View {
                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                 .frame(width: 170, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/  )
                 Spacer()
+            
+            if IsWithText == true {
                 ZStack {
                     Blur(style: .dark)
                     Text(album.name).foregroundColor(.white)
                 }.frame(width: 50, alignment: .center)
+            }
         }).frame(width: 170, height: 200, alignment:
                     .center).clipped().cornerRadius(20).shadow(radius: 10).padding(20)
     }
 }
 struct SongCell: View {
+    var album : Album
     var song : Song
-    var body: some View{
-        HStack {
-            ZStack {
-                Circle().frame(width: 50, height: 50, alignment: .center).foregroundColor(.blue)
-                Circle().frame(width: 20, height: 20, alignment: .center).foregroundColor(.white)
-            }
-            Text(song.name).bold()
-            Spacer()
-            Text(song.time)
-        }.padding(20)
+    var body: some View {
+        NavigationLink(
+            destination: PlayerView(album: album, song: song),
+            label: {
+                HStack {
+                    ZStack {
+                        Circle().frame(width: 50, height: 50, alignment: .center).foregroundColor(.blue)
+                        Circle().frame(width: 20, height: 20, alignment: .center).foregroundColor(.white)
+                    }
+                    Text(song.name).bold()
+                    Spacer()
+                    Text(song.time)
+                }.padding(20)
+            }).buttonStyle(PlainButtonStyle())
     }
 }
 
@@ -120,6 +129,6 @@ struct ContentView_Previews: PreviewProvider {
                                       songs: [Song(name: "Song 1", time: "2:36"),
                                               Song(name: "Song 2", time: "2:36"),
                                               Song(name: "Song 3", time: "2:36"),
-                                              Song(name: "Song 4", time: "2:36")] ))
+                                              Song(name: "Song 4", time: "2:36")] ), IsWithText: true)
     }
 }

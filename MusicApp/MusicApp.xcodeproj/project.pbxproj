@@ -12,6 +12,7 @@
 		2F10EC5C25560F65008016B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F10EC5B25560F65008016B8 /* Assets.xcassets */; };
 		2F10EC5F25560F65008016B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F10EC5E25560F65008016B8 /* Preview Assets.xcassets */; };
 		2F3A012B255B4C16006AADAA /* BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A012A255B4C16006AADAA /* BlurEffect.swift */; };
+		2F526D9F255B87CD00EC9AC8 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F526D9E255B87CD00EC9AC8 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2F10EC5E25560F65008016B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F10EC6025560F65008016B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F3A012A255B4C16006AADAA /* BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurEffect.swift; sourceTree = "<group>"; };
+		2F526D9E255B87CD00EC9AC8 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				2F3A012A255B4C16006AADAA /* BlurEffect.swift */,
 				2F10EC5925560F64008016B8 /* ContentView.swift */,
 				2F10EC5B25560F65008016B8 /* Assets.xcassets */,
+				2F526D9E255B87CD00EC9AC8 /* PlayerView.swift */,
 				2F10EC6025560F65008016B8 /* Info.plist */,
 				2F10EC5D25560F65008016B8 /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 				2F3A012B255B4C16006AADAA /* BlurEffect.swift in Sources */,
 				2F10EC5A25560F64008016B8 /* ContentView.swift in Sources */,
 				2F10EC5825560F64008016B8 /* MusicAppApp.swift in Sources */,
+				2F526D9F255B87CD00EC9AC8 /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
