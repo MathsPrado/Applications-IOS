@@ -11,6 +11,8 @@
 		2F05F62625605DE90019C0FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F05F62525605DE90019C0FF /* ContentView.swift */; };
 		2F05F62825605DEB0019C0FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F05F62725605DEB0019C0FF /* Assets.xcassets */; };
 		2F05F62B25605DEB0019C0FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F05F62A25605DEB0019C0FF /* Preview Assets.xcassets */; };
+		2F7BBD102561901000B26E74 /* viagens.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F7BBD0F2561900F00B26E74 /* viagens.json */; };
+		2F7BBD1A2561910400B26E74 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 2F7BBD192561910400B26E74 /* Models */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		2F05F62725605DEB0019C0FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F05F62A25605DEB0019C0FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F05F62C25605DEB0019C0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F7BBD0F2561900F00B26E74 /* viagens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = viagens.json; path = ../../../../../Downloads/Resources/viagens.json; sourceTree = "<group>"; };
+		2F7BBD192561910400B26E74 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../../../../../Downloads/Resources/Models; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				2F05F62525605DE90019C0FF /* ContentView.swift */,
 				2F05F62725605DEB0019C0FF /* Assets.xcassets */,
 				2F05F62C25605DEB0019C0FF /* Info.plist */,
+				2F7BBD192561910400B26E74 /* Models */,
+				2F7BBD0F2561900F00B26E74 /* viagens.json */,
 				2F05F62925605DEB0019C0FF /* Preview Content */,
 			);
 			path = "alura-viagens";
@@ -128,6 +134,8 @@
 			files = (
 				2F05F62B25605DEB0019C0FF /* Preview Assets.xcassets in Resources */,
 				2F05F62825605DEB0019C0FF /* Assets.xcassets in Resources */,
+				2F7BBD1A2561910400B26E74 /* Models in Resources */,
+				2F7BBD102561901000B26E74 /* viagens.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
