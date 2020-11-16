@@ -40,11 +40,22 @@ struct ContentView: View {
                 }
                 .offset(y: -25)
                 
-                List {
-                    Text("Rio de Janeiro")
-                    Text("Ceará")
-                    Text("Atibaia")
-                    Text("Rio de janeiro")
+                List(viagens) { viagem in
+                    VStack(alignment: .leading){
+                        Text(viagem.titulo)
+                            .padding(7.0)
+                        Image(viagem.imagem)
+                            .resizable()
+                            .frame(height:250)
+                        
+                        HStack{
+                            Text(viagem.quantidadeDeDias)
+                            Spacer()
+                            Text(viagem.valor)
+                        }
+                    }
+                    
+
                 }
             }
         }
@@ -57,3 +68,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
