@@ -1,16 +1,17 @@
 //
-//  ContentView.swift
+//  HeaderView.swift
 //  alura-viagens
 //
-//  Created by Matheus Prado on 14/11/20.
+//  Created by Matheus Prado on 16/11/20.
 //
 
+import Foundation
 import SwiftUI
 
-struct ContentView: View {
+struct headerView: View {
     var body: some View {
         GeometryReader { view in
-            VStack(){
+            VStack{
                 VStack() {
                     Text("ALURA VIAGENS").bold().foregroundColor(.black).font(.custom("Avenir Black", size: 30)).padding().padding()
                     Text("Especial").bold().foregroundColor(.white).font(.custom("Avenir Black", size: 21)).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity,  alignment: .leading).padding(.leading,30)
@@ -39,33 +40,14 @@ struct ContentView: View {
                     .offset(x: -60)
                 }
                 .offset(y: -25)
-                
-                List(viagens) { viagem in
-                    VStack(alignment: .leading){
-                        Text(viagem.titulo)
-                            .padding(7.0)
-                        Image(viagem.imagem)
-                            .resizable()
-                            .frame(height:250)
-                        
-                        HStack{
-                            Text(viagem.quantidadeDeDias)
-                            Spacer()
-                            Text(viagem.valor)
-                        }
-                    }
-                    
-
-                }
             }
         }
-        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct HeaderView_Previews: PreviewProvider {
+    static var previews: some View{
+        headerView()
+            
     }
 }
-
