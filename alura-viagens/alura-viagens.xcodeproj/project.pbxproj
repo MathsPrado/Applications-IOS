@@ -12,6 +12,7 @@
 		2F05F62825605DEB0019C0FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F05F62725605DEB0019C0FF /* Assets.xcassets */; };
 		2F05F62B25605DEB0019C0FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F05F62A25605DEB0019C0FF /* Preview Assets.xcassets */; };
 		2F1F6F952562266200C4FDC0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1F6F942562266200C4FDC0 /* HeaderView.swift */; };
+		2F646365256AC86500ABA4A7 /* MapaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F646364256AC86500ABA4A7 /* MapaView.swift */; };
 		2F7BBD102561901000B26E74 /* viagens.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F7BBD0F2561900F00B26E74 /* viagens.json */; };
 		2F7BBD1E2561946500B26E74 /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7BBD1D2561946500B26E74 /* Viagem.swift */; };
 		2F7BBD222561946F00B26E74 /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7BBD212561946F00B26E74 /* Dados.swift */; };
@@ -26,6 +27,7 @@
 		2F05F62A25605DEB0019C0FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F05F62C25605DEB0019C0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F1F6F942562266200C4FDC0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		2F646364256AC86500ABA4A7 /* MapaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaView.swift; sourceTree = "<group>"; };
 		2F7BBD0F2561900F00B26E74 /* viagens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = viagens.json; path = ../../../../../Downloads/Resources/viagens.json; sourceTree = "<group>"; };
 		2F7BBD1D2561946500B26E74 /* Viagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Viagem.swift; path = ../../../../../Downloads/Resources/Models/Viagem.swift; sourceTree = "<group>"; };
 		2F7BBD202561946800B26E74 /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				2F05F62525605DE90019C0FF /* ContentView.swift */,
 				2F1F6F942562266200C4FDC0 /* HeaderView.swift */,
 				2FD0005C2569A6EC00CD05B3 /* CelulaViagemView.swift */,
+				2F646364256AC86500ABA4A7 /* MapaView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F1F6F952562266200C4FDC0 /* HeaderView.swift in Sources */,
+				2F646365256AC86500ABA4A7 /* MapaView.swift in Sources */,
 				2F05F62625605DE90019C0FF /* ContentView.swift in Sources */,
 				2F7BBD222561946F00B26E74 /* Dados.swift in Sources */,
 				2F7BBD1E2561946500B26E74 /* Viagem.swift in Sources */,
