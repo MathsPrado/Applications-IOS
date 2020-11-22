@@ -9,19 +9,26 @@ import SwiftUI
 
 struct CelulaViagemViw: View {
     var viagem: Viagem;
+    @Environment(\.horizontalSizeClass) var
+        horizontalSizeClass
     
     var body : some View{
         VStack(alignment: .leading){
             Text(viagem.titulo)
-                .padding(7.0)
+                .font(.custom("Avenir", size: self.horizontalSizeClass == .compact ? 20 : 34))
+                .padding(8.0)
             Image(viagem.imagem)
                 .resizable()
-                .frame(height:250)
+                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                .frame(height:self.horizontalSizeClass == .compact ? 250 : 300)
+                .clipped()
             
             HStack{
                 Text(viagem.quantidadeDeDias)
+                .font(.custom("Avenir", size: self.horizontalSizeClass == .compact ? 14 : 34))
                 Spacer()
                 Text(viagem.valor)
+                .font(.custom("Avenir", size: self.horizontalSizeClass == .compact ? 14 : 34))
             }
         }
     }
