@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct SecaoPacotesView: View {
+    
+    //MARK: Atributos
+    
+    var nomeDaSecao: String
+    var pacotes: [PacoteDeViagem]
+    
+    //MARK: Views
+    
+    
     var body: some View {
         VStack(alignment: .leading){
-            Text("América do Norte")
+            Text(self.nomeDaSecao)
                 .font(.headline)
                 .padding(.leading, 15)
                 .padding(.top, 5)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack{
-                PacotesViagensView()
-                PacotesViagensView()
-                PacotesViagensView()
+                    ForEach(self.pacotes) { pacotes in
+                        PacotesViagensView()
+                    }
         
                 }
             }
@@ -30,7 +39,7 @@ struct SecaoPacotesView: View {
 
 struct SecaoPacotesView_Previews: PreviewProvider {
     static var previews: some View {
-        SecaoPacotesView()
+        SecaoPacotesView(nomeDaSecao: pacotesDeViagens[0].categoria.rawValue, pacotes: pacotesDeViagens)
             .previewLayout(.fixed(width: 600, height: 350))
     }
 }
