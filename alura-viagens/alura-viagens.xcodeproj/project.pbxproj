@@ -21,6 +21,7 @@
 		2FED74FD256B446000A6D5D1 /* SecaoPacotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED74FC256B446000A6D5D1 /* SecaoPacotesView.swift */; };
 		2FED7500256B4ADA00A6D5D1 /* PacoteDeViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED74FF256B4ADA00A6D5D1 /* PacoteDeViagem.swift */; };
 		2FED7504256B4BD100A6D5D1 /* alura_viagensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED7503256B4BD100A6D5D1 /* alura_viagensApp.swift */; };
+		2FED7507256C8AF400A6D5D1 /* ListaDePacotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED7506256C8AF400A6D5D1 /* ListaDePacotesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		2FED74FC256B446000A6D5D1 /* SecaoPacotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecaoPacotesView.swift; sourceTree = "<group>"; };
 		2FED74FF256B4ADA00A6D5D1 /* PacoteDeViagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PacoteDeViagem.swift; path = "../../../../../../Downloads/ios-swiftui-arquivos-iniciais/PacoteDeViagem.swift"; sourceTree = "<group>"; };
 		2FED7503256B4BD100A6D5D1 /* alura_viagensApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = alura_viagensApp.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/alura_viagensApp.swift"; sourceTree = "<group>"; };
+		2FED7506256C8AF400A6D5D1 /* ListaDePacotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDePacotesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				2F646364256AC86500ABA4A7 /* MapaView.swift */,
 				2FED74ED256B24A100A6D5D1 /* PacotesViagensView.swift */,
 				2FED74FC256B446000A6D5D1 /* SecaoPacotesView.swift */,
+				2FED7506256C8AF400A6D5D1 /* ListaDePacotesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				2F05F62625605DE90019C0FF /* ContentView.swift in Sources */,
 				2FED7500256B4ADA00A6D5D1 /* PacoteDeViagem.swift in Sources */,
 				2F7BBD222561946F00B26E74 /* Dados.swift in Sources */,
+				2FED7507256C8AF400A6D5D1 /* ListaDePacotesView.swift in Sources */,
 				2F7BBD1E2561946500B26E74 /* Viagem.swift in Sources */,
 				2FD0005D2569A6EC00CD05B3 /* CelulaViagemView.swift in Sources */,
 				2FED7504256B4BD100A6D5D1 /* alura_viagensApp.swift in Sources */,

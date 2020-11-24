@@ -26,13 +26,13 @@ struct SecaoPacotesView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack{
                     ForEach(self.pacotes) { pacotes in
-                        PacotesViagensView()
+                        PacotesViagensView(pacoteDeViagem: pacotes)
                     }
         
                 }
             }
         }
-        .frame( height: 300)
+        .frame( height: 350)
         .background(Color( red: 247.0, green: 247.0, blue: 247.0))
     }
 }
