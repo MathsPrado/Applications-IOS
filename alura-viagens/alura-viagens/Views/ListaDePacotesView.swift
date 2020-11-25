@@ -14,17 +14,26 @@ struct ListaDePacotesView: View {
     var categorias : [String: [PacoteDeViagem]] {
         Dictionary(grouping: pacotesDeViagens, by: { $0.categoria.rawValue})
     }
+    init (){
+        UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().backgroundColor = UIColor(red: 247.0/255, green: 247.0/255, blue: 247.0/255, alpha: 1)
+    }
     
     var body: some View {
-        List {
-            ForEach(categorias.keys.sorted(), id: \.self){
-                chave in
-                SecaoPacotesView(nomeDaSecao: chave, pacotes: self.categorias[chave]!)
+        NavigationView {
+            List {
+                ForEach(categorias.keys.sorted(), id: \.self){
+                    chave in
+                    SecaoPacotesView(nomeDaSecao: chave, pacotes: self.categorias[chave]!)
+                }
             }
+            .navigationTitle("Pacotes")
+            .padding(.leading, -10)
+            .padding(.trailing, -10)
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
-
 struct ListaDePacotesView_Previews: PreviewProvider {
     static var previews: some View {
         ListaDePacotesView()
