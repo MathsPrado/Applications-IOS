@@ -1,17 +1,17 @@
 //
-//  ContentView.swift
+//  DestaquesView.swift
 //  alura-viagens
 //
-//  Created by Matheus Prado on 14/11/20.
+//  Created by Matheus Prado on 26/11/20.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct DestaquesView: View {
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var body: some View {
-        
         NavigationView {
             GeometryReader { view in
                 VStack(){
@@ -26,12 +26,12 @@ struct ContentView: View {
             }
             .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }.navigationViewStyle(StackNavigationViewStyle())
+
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DestaquesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DestaquesView()
     }
 }
-
