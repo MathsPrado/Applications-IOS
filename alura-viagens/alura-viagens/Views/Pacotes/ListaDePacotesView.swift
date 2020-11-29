@@ -14,10 +14,6 @@ struct ListaDePacotesView: View {
     var categorias : [String: [PacoteDeViagem]] {
         Dictionary(grouping: pacotesDeViagens, by: { $0.categoria.rawValue})
     }
-    init (){
-        UITableView.appearance().separatorStyle = .none
-        UITableView.appearance().backgroundColor = UIColor(red: 247.0/255, green: 247.0/255, blue: 247.0/255, alpha: 1)
-    }
     
     var body: some View {
         NavigationView {
@@ -30,8 +26,19 @@ struct ListaDePacotesView: View {
             .navigationTitle("Pacotes")
             .padding(.leading, -10)
             .padding(.trailing, -10)
+            
+            .onAppear{
+                UITableView.appearance().separatorStyle = .none
+                UITableView.appearance().backgroundColor = UIColor(red: 247.0/255, green: 247.0/255, blue: 247.0/255, alpha: 1)
+
+            }
+            .onDisappear {
+                    UITableView.appearance().separatorStyle = .singleLine
+                    UITableView.appearance().backgroundColor = nil
+                UINavigationBar.appearance().backgroundColor = nil
+                
+            }
         }
-        .edgesIgnoringSafeArea(.top)
     }
 }
 struct ListaDePacotesView_Previews: PreviewProvider {
