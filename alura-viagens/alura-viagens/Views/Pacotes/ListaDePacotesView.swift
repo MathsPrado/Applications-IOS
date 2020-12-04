@@ -27,17 +27,18 @@ struct ListaDePacotesView: View {
             .padding(.leading, -10)
             .padding(.trailing, -10)
             
-            .onAppear{
-                UITableView.appearance().separatorStyle = .none
-                UITableView.appearance().backgroundColor = UIColor(red: 247.0/255, green: 247.0/255, blue: 247.0/255, alpha: 1)
 
-            }
-            .onDisappear {
-                    UITableView.appearance().separatorStyle = .singleLine
-                    UITableView.appearance().backgroundColor = nil
-                UINavigationBar.appearance().backgroundColor = nil
-                
-            }
+        }
+        .onAppear{
+            UITableView.appearance().separatorStyle = .none
+            UITableView.appearance().backgroundColor = UIColor(red: 247.0/255, green: 247.0/255, blue: 247.0/255, alpha: 1)
+
+        }
+        .onDisappear {
+                UITableView.appearance().separatorStyle = .singleLine
+                UITableView.appearance().backgroundColor = nil
+            UINavigationBar.appearance().backgroundColor = nil
+            
         }
     }
 }
