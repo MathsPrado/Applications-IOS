@@ -25,7 +25,7 @@ struct Song : Hashable {
 struct ContentView: View {
     
     var albums = [Album( name: "Album 1", image: "1",
-                         songs: [Song(name: "Song 3", time: "2:36"),
+                         songs: [Song(name: "Minha musica muito Dahora", time: "2:36"),
                                  Song(name: "Song 22", time: "2:36"),
                                  Song(name: "Song 3", time: "2:36"),
                                  Song(name: "Song 11", time: "2:36")]),
