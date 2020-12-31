@@ -49,10 +49,42 @@ class AdicionarItensViewController: UIViewController {
             return
         }
         
+        
+        
         if let numeroDeCalorias: Double = Double(calorias){
             let item = Item(nome: nome, calorias: numeroDeCalorias)
+            
+            // MARK: Formas de trabalhar com Opcionais (optional chaning)
+            //1:
+//            if delegate == nil{
+//                delegate!.add(item)
+//            }
+//            delegate!.add(item)
+            
+            // 2:
+//            if delegate != nil {
+//                delegate!.add(item)
+//            }
+            
+            // 3:
+            
+//            if let delegate = delegate {
+//                delegate.add(item)
+//            }
+            
+            // 4:
+            
+//            guard let delegate = delegate else {
+//                return
+//            }
+//            delegate.add(item)
+
             delegate?.add(item)
+            
+            
+//            delegate?.add(item)
             navigationController?.popViewController(animated: true)
         }
+        
     }
 }
