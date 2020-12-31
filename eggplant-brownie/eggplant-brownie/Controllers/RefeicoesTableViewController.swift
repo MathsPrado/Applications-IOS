@@ -30,7 +30,24 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = refeicao.nome
 
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(mostraDetalhes(_:)))
+        
+        cell.addGestureRecognizer(longPress)
+        
         return cell
+    }
+    
+    @objc func mostraDetalhes(_ gesture: UILongPressGestureRecognizer){
+        if gesture.state == .began {
+            let celula = gesture.view as! UITableViewCell
+            
+            guard let indexPath = tableView.indexPath(for: celula) else { return }
+            
+            let refeicao = refeicoes[indexPath.row]
+            print("refeicao: \(refeicao.nome)")
+            print("LongPress gesture")
+            
+        }
     }
     
     func Add(_ refeicao: Refeicao){ 

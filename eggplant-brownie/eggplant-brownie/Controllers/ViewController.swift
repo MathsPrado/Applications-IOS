@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         else{
             celula.accessoryType = .none
             let item = itens[indexPath.row]
-            if let position = itensSelecionados.index(of: item){
+            if let position = itensSelecionados.firstIndex(of: item){
                 itensSelecionados.remove(at: position)
 //                print("-------")
 //                for novoItem in itensSelecionados{
