@@ -74,7 +74,7 @@
                     <navigationItem key="navigationItem" id="wjM-M7-hG7"/>
                     <connections>
                         <outlet property="felicidadeTextField" destination="9CG-6j-ACH" id="KKV-sQ-tXK"/>
-                        <outlet property="itensTableView" destination="Gg7-AB-Vor" id="lmg-9D-ZFT"/>
+                        <outlet property="itensTableView" destination="Gg7-AB-Vor" id="aUz-qS-vVo"/>
                         <outlet property="nomeTextField" destination="g4B-Ax-cfm" id="z5F-Y4-Und"/>
                     </connections>
                 </viewController>
