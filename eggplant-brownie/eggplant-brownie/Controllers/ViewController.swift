@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: - IBOutlets
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet weak var felicidadeTextField: UITextField?
-    @IBOutlet weak var itensTableView: UITableView!
+    @IBOutlet weak var itensTableView: UITableView?
     
     // MARK: - View life cycle
     
@@ -49,10 +49,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(_ item: Item) {
         itens.append(item)
-        itensTableView.reloadData()
         
+        if let tableView = itensTableView{
+            tableView.reloadData()
+        } else{
+            Alerta(controller: self).exibe(titulo: "Desculpe ):", mensagem: "Não foi possível atualizar a tabela")
+        }
     }
     
+
     
     // MARK: - UITableViewDelegate
     
@@ -80,6 +85,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    
     //MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,7 +100,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return celula
     }
     
-    
+
     
     //MARK: - IBActions
     @IBAction func adicionar(_ sender: Any) {
