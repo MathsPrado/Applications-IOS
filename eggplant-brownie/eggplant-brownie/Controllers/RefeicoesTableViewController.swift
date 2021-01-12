@@ -14,6 +14,8 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
     var refeicoes = [Refeicao(nome: "Beringela", felicidade: 5),
                      Refeicao(nome: "Macarrão", felicidade: 3),
                      Refeicao(nome: "Comida Japo", felicidade: 3, itens: [])]
+    
+    
 
     // MARK: - UITableViewDataSource
 
@@ -49,11 +51,17 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             present(alerta, animated: true) {
                 //depois que foi exibido
             }
-            print("refeicao: \(refeicao.nome)")
-            print("LongPress gesture")
+            let botaoRemover = UIAlertAction(title: "Remover", style: .destructive, handler: { alerta in
+                self.refeicoes.remove(at: indexPath.row)
+                self.tableView.reloadData()
+                //Closure
+            })
+            alerta.addAction(botaoRemover)
             
         }
     }
+    
+
     
     func Add(_ refeicao: Refeicao){ 
         refeicoes.append(refeicao)
