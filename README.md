@@ -6,7 +6,7 @@
 </h1>
 
 # alura-viagens
-<h4>App using SWIFTUI, ScrollView, Navigation Bar e componentes </h4>
+<h4>App using SWIFTUI Layouts ( Alura Course iOS SwiftUI: ScrollView and Navigation Bar e componentes and iOS: Layouts com SwiftUI ) </h4>
 
 
 # eggplant-brownie
