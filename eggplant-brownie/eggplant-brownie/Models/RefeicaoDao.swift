@@ -34,6 +34,17 @@ class RefeicaoDao{
         
     }
     
+    func removeRefeicao(_ refeicoes: [Refeicao]){
+        guard let caminho = recuperaCaminho() else {return}
+        do
+        {
+           try FileManager.default.removeItem(at: caminho)
+            
+        } catch{
+            print("Error on Deleting " + error.localizedDescription)
+        }
+    }
+    
     func recuperaCaminho() -> URL? {
         guard let  diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
         let caminho = diretorio.appendingPathComponent("refeicao")

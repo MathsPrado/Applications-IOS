@@ -15,6 +15,9 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
     
     override func viewDidLoad() {
         refeicoes = RefeicaoDao().recupera()
+        let botaoAdicionaItem = UIBarButtonItem(title:"SALVAR", style: .plain, target: self, action: #selector(saveRe))
+        //navigationItem.rightBarButtonItem = botaoAdicionaItem
+        navigationItem.leftBarButtonItems = [botaoAdicionaItem]
     }
     // MARK: - UITableViewDataSource
 
@@ -47,18 +50,21 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             RemoveRefeicaoViewController(controller: self).exibe(refeicao, handler: {
                 alert in
                 self.refeicoes.remove(at: indexPath.row)
+                //RefeicaoDao().removeRefeicao(self.refeicoes)
                 self.tableView.reloadData()
             })
             
         }
     }
     
-    
+    @objc func saveRe(){
+        RefeicaoDao().save(self.refeicoes)
+    }
     
     func Add(_ refeicao: Refeicao){ 
         refeicoes.append(refeicao)
         tableView.reloadData()
-        RefeicaoDao().save(refeicoes)
+        //RefeicaoDao().save(refeicoes)
     }
     
     

@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - View life cycle
     
     override func viewDidLoad(){
-        let botaoAdicionaItem = UIBarButtonItem(title:"Adicionar", style: .plain, target: self, action: #selector(adicionarItens))
+        let botaoAdicionaItem = UIBarButtonItem(title:"Adiciona", style: .plain, target: self, action: #selector(adicionarItens))
         navigationItem.rightBarButtonItem = botaoAdicionaItem
         recuperaItens()
         
@@ -49,8 +49,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @objc func adicionarItens(){
         let adicionarItensViewController = AdicionarItensViewController(delegate : self)
         navigationController?.pushViewController(adicionarItensViewController, animated: true)
-        
     }
+    
     
     
     func add(_ item: Item) {
@@ -61,8 +61,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else{
             Alerta(controller: self).exibe(titulo: "Desculpe ):", mensagem: "Não foi possível atualizar a tabela")
         }
-        
-        
     }
     
 
