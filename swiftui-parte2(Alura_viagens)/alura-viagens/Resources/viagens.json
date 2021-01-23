@@ -10,17 +10,7 @@
             "latitude": -22.9035
         }
     },
-    {
-        "id": 2,
-        "titulo": "Ceará",
-        "imagem": "img2",
-        "quantidadeDeDias": "6 dias",
-        "valor": "1.200,00",
-        "coordenada": {
-            "longitude": -38.5434,
-            "latitude": -3.71839
-        }
-    },
+    
     {
         "id": 3,
         "titulo": "Atibaia - São Paulo",
