@@ -3,107 +3,128 @@ import UIKit
 var str = "Hello, playground"
 
 //MARK: Dicionario Merge array
-var alunos = [
-    "Matheus": "Dev",
-    "Prado": "Prog",
-    "Faria":"React",
-    "lima": "Fullstack"
-]
+//var alunos = [
+//    "Matheus": "Dev",
+//    "Prado": "Prog",
+//    "Faria":"React",
+//    "lima": "Fullstack"
+//]
 
-var novosAlunos = [
-    "Felipe": "c#",
-    "Henrique": "java",
-    "lima": "SWIFT"
-]
+//var novosAlunos = [
+//    "Felipe": "c#",
+//    "Henrique": "java",
+//    "lima": "SWIFT"
+//]
 
-//novosAlunos.forEach({
-//    if !alunos.keys.contains($0.key){
-//        alunos[$0.key] = $0.value
-//
-//    }
-//})
+////novosAlunos.forEach({
+////    if !alunos.keys.contains($0.key){
+////        alunos[$0.key] = $0.value
+////
+////    }
+////})
 
-alunos.merge(novosAlunos) { (_ , novosAlunos ) -> String in
-    novosAlunos
-}
-
-print(alunos)
-
-
-//MARK: dicionario Grouping
-//var dicionarioDeNomes: [String: [String]] = [:]
-
-
-//for aluno in alunos
-//{
-//    if let caracter = aluno.key.first{
-//        let prefixo = String(caracter)
-//        if var listaDeNomes = dicionarioDeNomes[prefixo]
-//        {
-//            listaDeNomes.append(aluno.key)
-//            dicionarioDeNomes[prefixo] = listaDeNomes
-//        }else{
-//            dicionarioDeNomes[prefixo] = [aluno.key]
-//        }
-//    }
+//alunos.merge(novosAlunos) { (_ , novosAlunos ) -> String in
+//    novosAlunos
 //}
 
-//print(dicionarioDeNomes)
+//print(alunos)
 
-print("")
 
-let dicionarioDeNomes = Dictionary(grouping: alunos.keys, by: { $0.prefix(1)})
-print (dicionarioDeNomes)
+// : dicionario Grouping
+////var dicionarioDeNomes: [String: [String]] = [:]
 
-print("")
 
-let alunosDeAlgoritmos = ["Amanda": 7, "Adriano":10, "Bianca": 6, "Felipe":10, "Matheus":10]
-let alunosDeMatematica = ["Amanda": 7, "Adriano":10, "Bianca": 6, "Felipe":10, "Matheus":10]
+////for aluno in alunos
+////{
+////    if let caracter = aluno.key.first{
+////        let prefixo = String(caracter)
+////        if var listaDeNomes = dicionarioDeNomes[prefixo]
+////        {
+////            listaDeNomes.append(aluno.key)
+////            dicionarioDeNomes[prefixo] = listaDeNomes
+////        }else{
+////            dicionarioDeNomes[prefixo] = [aluno.key]
+////        }
+////    }
+////}
+//
+////print(dicionarioDeNomes)
 
-print( alunosDeAlgoritmos == alunosDeMatematica)
+//print("")
+
+//let dicionarioDeNomes = Dictionary(grouping: alunos.keys, by: { $0.prefix(1)})
+//print (dicionarioDeNomes)
+
+//print("")
+
+//let alunosDeAlgoritmos = ["Amanda": 7, "Adriano":10, "Bianca": 6, "Felipe":10, "Matheus":10]
+//let alunosDeMatematica = ["Amanda": 7, "Adriano":10, "Bianca": 6, "Felipe":10, "Matheus":10]
+
+//print( alunosDeAlgoritmos == alunosDeMatematica)
+
 
 
 //MARK: STRING
 
-var texto = "Vamos começar a estudar as \"novidades\" de Swift!!!"
+//var texto = "Vamos começar a estudar as \"novidades\" de Swift!!!"
 
 //MARK: Antiga forma
-let indice = texto.index(texto.endIndex, offsetBy: -3)
-let textoFormatado = texto.substring(to: indice)
-print(textoFormatado);
+//let indice = texto.index(texto.endIndex, offsetBy: -3)
+//let textoFormatado = texto.substring(to: indice)
+//print(textoFormatado);
+
 
 //MARK: NEW
 
-print(texto.filter({$0 != "!"}))
+//print(texto.filter({$0 != "!"}))
 
-//let lista = ["Amanda", "Adriano", "Bianca" ,"Felipe" , "Matheus"]
+////let lista = ["Amanda", "Adriano", "Bianca" ,"Felipe" , "Matheus"]
 
-//lista.forEach ({
-//  print($0)
+////lista.forEach ({
+////  print($0)
+////})
+
+//texto.forEach({
+//    print($0)
 //})
 
-texto.forEach({
-    print($0)
-})
+//let lista = ["Amanda", "Adriano", "Bianca" ,"Felipe" , "Matheus"]
+//print("-----")
+//print(lista.count)
 
-let lista = ["Amanda", "Adriano", "Bianca" ,"Felipe" , "Matheus"]
-print("-----")
-print(lista.count)
+//let mensagem = "A lingaugem Swift é uma linguagem muito moderna e intuitiva. Estamos aprendendo as principais novidades da linguagem. Foco no SWIFITAO BY MATHEUS!! começamos com as novidades na API de dicionarios. E nessa aula, estamos aprendendo sobre strings"
 
-let mensagem = "A lingaugem Swift é uma linguagem muito moderna e intuitiva. Estamos aprendendo as principais novidades da linguagem. Foco no SWIFITAO BY MATHEUS!! começamos com as novidades na API de dicionarios. E nessa aula, estamos aprendendo sobre strings"
+//print(mensagem.count)
+//print(mensagem)
 
-print(mensagem.count)
-print(mensagem)
+////for caracter in mensagem {
+////    print(caracter)
+////}
 
-for caracter in mensagem {
-    print(caracter)
-}
-
-let novaMensagem = """
-A linguagem Swift é uma linguagem muito moderna e intuitiva
-    Estamos aprendendo as principais novidades da linguagem
-Comecamos com as novidades de dicionario
-"""
-print(novaMensagem)
+//let novaMensagem = """
+//A linguagem Swift é uma linguagem muito moderna e intuitiva
+//    Estamos aprendendo as principais novidades da linguagem
+//Comecamos com as novidades de dicionario
+//"""
+//print(novaMensagem)
 
 //Trabalhar com strings virou igual a trabalhar com array!! (=
+
+
+
+
+//MARK: NUMERO RANDOMICO
+
+let numeroRandomico = Int(arc4random_uniform(10))
+print(numeroRandomico)
+
+let novoNumero = Int.random(in: 0..<10)
+print(novoNumero)
+
+// MARK: SORTEAR OBJETO RANDOMICO
+
+let listaDeMusica = ["Avenged", "Justin", "AC/DC"]
+print(listaDeMusica.randomElement() as Any)
+print(listaDeMusica.shuffled())
+
+
