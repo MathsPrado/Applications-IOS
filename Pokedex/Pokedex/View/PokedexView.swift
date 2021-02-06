@@ -11,13 +11,16 @@ struct PokedexView: View {
     
     private let gridItens = [GridItem(.flexible()), GridItem(.flexible())]
     
+    @ObservedObject var viewModel = PokemonViewModel()
+    
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridItens, spacing:16) {
                     //dont loading all of those things at once right
-                    ForEach(0..<151){ _ in
-                        PokemonCell()
+                    ForEach(viewModel.pokemon){ pokemon in
+                        PokemonCell(pokemon: pokemon)
                     }
                 }
             }
