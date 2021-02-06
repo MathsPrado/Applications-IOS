@@ -22,7 +22,7 @@ struct PokedexView: View {
                     ForEach(viewModel.pokemon){ pokemon in
                         PokemonCell(pokemon: pokemon)
                     }
-                }
+                }Color
             }
             .navigationTitle("Pokedex (=")
         }

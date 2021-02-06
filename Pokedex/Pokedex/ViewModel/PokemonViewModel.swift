@@ -26,6 +26,21 @@ class PokemonViewModel: ObservableObject{
             }
         }.resume()
     }
+    
+    func backGroundColor(forType type: String) -> Color {
+        switch type {
+        case "fire": return Color(.systemRed)
+        case "poison": return Color(.systemGreen)
+        case "water": return Color(.systemTeal)
+        case "eletric": return Color(.systemYellow)
+        case "psychic": return Color(.systemPurple)
+        case "normal": return Color(.systemOrange)
+        case "ground": return Color(.systemGray)
+        case "flying": return Color(.systemTeal)
+        case "fairy": return Color(.systemPink)
+        default: return Color(.systemIndigo)
+        }
+    }
 }
 
 

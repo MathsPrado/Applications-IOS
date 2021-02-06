@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PokemonCell: View {
     let pokemon: Pokemon
+    let viewModel = PokemonViewModel()
     
     var body: some View {
         ZStack{
@@ -33,22 +35,16 @@ struct PokemonCell: View {
                         )
                         .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 24)
                     
-                    Image("1").resizable()
+                    KFImage(URL(string: pokemon.imageUrl)).resizable()
                         .scaledToFit()
                         .frame(width: 68, height: 68)
                         .padding([.bottom, .trailing], 4)
                 }
             }
         }
-        .background(Color.green)
+        .background(viewModel.backGroundColor(forType: pokemon.type))
         .cornerRadius(12)
         .shadow(color: .green, radius: 6, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/ )
         
-    }
-}
-
-struct PokemonCell_Previews: PreviewProvider {
-    static var previews: some View {
-        PokemonCell(pokemon: MOCK_POKEMON[3])
     }
 }
