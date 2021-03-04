@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct form: View {
+struct Fill: View {
 
     @State var username: String = ""
     @State var isPrivate: Bool = true
@@ -40,6 +40,6 @@ struct form: View {
 
 struct form_Previews: PreviewProvider {
     static var previews: some View {
-        form()
+        Fill()
     }
 }
