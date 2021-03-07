@@ -17,7 +17,7 @@ struct Fill: View {
             NavigationView {
                 Form {
                     Section(header: Text("Matricula")) {
-                        TextField("Username", text: $username)
+                        TextField("Matricula", text: $username)
                         VStack {
                             //[…]
                             Button("Save") {
@@ -27,9 +27,13 @@ struct Fill: View {
                     }
 
                     Section(header: Text("QRcode")) {
-                       
-                    }
-                    
+                        VStack {
+                            NavigationLink(destination: ScannerView()) {
+                                Text("QrCode")
+                            }
+                        }
+                  }
+    
                 }
                 
                 .navigationBarTitle("Cadastro")
