@@ -16,19 +16,7 @@ struct Navigation: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-//                List(1...10, id: \.self) { index in
-//                    NavigationLink(
-//                        destination: Text("teste #\(index) Details"),
-//                        label: {
-//                            Text("Item #\(index)")
-//                                .font(.system(size: 20, weight: .bold, design: .rounded))
-//                        })
-//                }
-//                .tabItem {
-//                    Image(systemName: "house.fill")
-//                    Text("Home")
-//                }
-//                .tag(0)
+
          
                 Fill()
                     .onTapGesture {
@@ -47,10 +35,11 @@ struct Navigation: View {
                          
                 List(0...22, id: \.self) { index in
                     NavigationLink(
-                        destination: Text("Departamento #\(index)"),
+                        destination: chart(info: "Departamento #\(index)"),
                         label: {
                             Text("Departamento #\(index)")
                                 .font(.system(size: 20, weight: .bold, design: .rounded))
+                            
                         })
                 }
                 .tabItem {

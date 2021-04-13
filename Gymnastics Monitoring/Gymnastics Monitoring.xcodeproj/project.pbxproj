@@ -11,6 +11,8 @@
 		2F52C1B925EAF520004C8650 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F52C1B825EAF520004C8650 /* ContentView.swift */; };
 		2F52C1BB25EAF522004C8650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F52C1BA25EAF522004C8650 /* Assets.xcassets */; };
 		2F52C1BE25EAF522004C8650 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F52C1BD25EAF522004C8650 /* Preview Assets.xcassets */; };
+		2F59977626252CAC00765026 /* chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F59977526252CAC00765026 /* chart.swift */; };
+		2F59977A26252E0F00765026 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 2F59977926252E0F00765026 /* SwiftUICharts */; };
 		2F7E21A125F5183B005D6795 /* HelloQrCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E21A025F5183B005D6795 /* HelloQrCodes.swift */; };
 		2F7E21A425F518E7005D6795 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E21A325F518E7005D6795 /* ScannerView.swift */; };
 		2F7E21A725F51A41005D6795 /* QrCodeCameraDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E21A625F51A41005D6795 /* QrCodeCameraDelegate.swift */; };
@@ -28,6 +30,7 @@
 		2F52C1BA25EAF522004C8650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F52C1BD25EAF522004C8650 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F52C1BF25EAF522004C8650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F59977526252CAC00765026 /* chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chart.swift; sourceTree = "<group>"; };
 		2F7E21A025F5183B005D6795 /* HelloQrCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloQrCodes.swift; sourceTree = "<group>"; };
 		2F7E21A325F518E7005D6795 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		2F7E21A625F51A41005D6795 /* QrCodeCameraDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeCameraDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FC53BB725F064F20096D667 /* CodeScanner in Frameworks */,
+				2F59977A26252E0F00765026 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 				2F7E21A925F51A62005D6795 /* QrCode */,
 				2FC53BB925F06B2C0096D667 /* Fill.swift */,
 				2FC53BBD25F077350096D667 /* Navigation.swift */,
+				2F59977526252CAC00765026 /* chart.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			name = "Gymnastics Monitoring";
 			packageProductDependencies = (
 				2FC53BB625F064F20096D667 /* CodeScanner */,
+				2F59977926252E0F00765026 /* SwiftUICharts */,
 			);
 			productName = "Gymnastics Monitoring";
 			productReference = 2F52C1B325EAF520004C8650 /* Gymnastics Monitoring.app */;
@@ -156,6 +162,7 @@
 			mainGroup = 2F52C1AA25EAF520004C8650;
 			packageReferences = (
 				2FC53BB525F064F20096D667 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				2F59977826252E0F00765026 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
 			);
 			productRefGroup = 2F52C1B425EAF520004C8650 /* Products */;
 			projectDirPath = "";
@@ -187,6 +194,7 @@
 				2F7E21A125F5183B005D6795 /* HelloQrCodes.swift in Sources */,
 				2F7E21B025F51AB4005D6795 /* CameraPreview.swift in Sources */,
 				2F52C1B925EAF520004C8650 /* ContentView.swift in Sources */,
+				2F59977626252CAC00765026 /* chart.swift in Sources */,
 				2F7E21A725F51A41005D6795 /* QrCodeCameraDelegate.swift in Sources */,
 				2FC53BBA25F06B2C0096D667 /* Fill.swift in Sources */,
 				2F7E21A425F518E7005D6795 /* ScannerView.swift in Sources */,
@@ -382,6 +390,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2F59977826252E0F00765026 /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AfrazCodes/SwiftUICharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.2;
+			};
+		};
 		2FC53BB525F064F20096D667 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -393,6 +409,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2F59977926252E0F00765026 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F59977826252E0F00765026 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
 		2FC53BB625F064F20096D667 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2FC53BB525F064F20096D667 /* XCRemoteSwiftPackageReference "CodeScanner" */;
